@@ -55,12 +55,12 @@ import {
 export const navLinks = {
   es: [
     { id: "about", title: "Acerca" },
-    { id: "work", title: "Trabajo" },
+    { id: "work", title: "Proyectos" }, 
     { id: "contact", title: "Contacto" },
   ],
   en: [
     { id: "about", title: "About" },
-    { id: "work", title: "Experience" },
+    { id: "work", title: "Projects" }, 
     { id: "contact", title: "Contact" },
   ],
 };
