@@ -14,6 +14,21 @@
   color-scheme: dark;
 }
 
+/* BLOQUEO DE OVERFLOW CRÍTICO */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+#root {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 .hash-span {
   margin-top: -100px;
   padding-bottom: 100px;
@@ -41,10 +56,7 @@
   background: linear-gradient(90.13deg, #00cea8 1.9%, #3399FF 97.5%);
 }
 
-/* --- Gradientes de Texto Corregidos --- 
-   Nota: -webkit-background-clip siempre debe ir antes o junto a background-clip
-   para evitar conflictos de validación en algunos linters.
-*/
+/* --- Gradientes de Texto --- */
 .orange-text-gradient {
   background: linear-gradient(to top, #f12711, #f5af19);
   -webkit-background-clip: text;

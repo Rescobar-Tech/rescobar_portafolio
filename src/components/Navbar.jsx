@@ -22,7 +22,6 @@ const Navbar = ({ language, setLanguage }) => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Función para alternar el idioma
   const toggleLanguage = () => {
     setLanguage(language === 'es' ? 'en' : 'es');
   };
@@ -42,7 +41,7 @@ const Navbar = ({ language, setLanguage }) => {
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logo_microsoft} alt='logo' className='w-10 h-10 md:w-12 md:h-12 object-contain'/>
+          <img src={logo_microsoft} alt='logo' className='w-9 h-9 md:w-12 md:h-12 object-contain'/>
           <p className='text-white text-[18px] font-bold cursor-pointer flex '>
             Rafael &nbsp;
             <span className='sm:block hidden'> | M365 & Azure Specialist</span>
@@ -54,7 +53,7 @@ const Navbar = ({ language, setLanguage }) => {
           {currentNavLinks.map((nav) => (
             <li
               key={nav.id}
-              className={`${active === nav.title ? "text-white" : "text-secondary"} 
+              className={`${active === nav.title ? "text-white" : "text-secondary"}
               hover:text-white text-[18px] font-medium cursor-pointer transition-colors`}
               onClick={() => setActive(nav.title)}
             >
@@ -62,7 +61,6 @@ const Navbar = ({ language, setLanguage }) => {
             </li>
           ))}
           
-          {/* Selector de Idioma Desktop */}
           <button
             onClick={toggleLanguage}
             className="bg-tertiary py-1 px-3 rounded-lg border border-white/20 text-[14px] font-bold text-white hover:bg-[#3399FF] hover:border-white transition-all ml-4"
@@ -73,7 +71,6 @@ const Navbar = ({ language, setLanguage }) => {
 
         {/* Mobile Navigation */}
         <div className='sm:hidden flex flex-1 justify-end items-center'>
-          {/* Selector de Idioma Móvil (fuera del menú para acceso rápido) */}
           <button
             onClick={toggleLanguage}
             className="bg-tertiary py-1 px-3 rounded-lg border border-white/20 text-[14px] font-bold text-white mr-4"
@@ -89,7 +86,7 @@ const Navbar = ({ language, setLanguage }) => {
           />
 
           <div
-            className={`${!toggle ? "hidden" : "flex"} 
+            className={`${!toggle ? "hidden" : "flex"}
             p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-50 rounded-xl shadow-xl`}
           >
             <ul className='list-none flex justify-end items-start flex-1 flex-col gap-4'>
