@@ -5,15 +5,17 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#050816",
-        secondary: "#aaa6c3",
-        tertiary: "#151030",
-        "black-100": "#100d25",
-        "black-200": "#090325",
+        primary: "#050816",      // Fondo principal ultra oscuro
+        secondary: "#aaa6c3",    // Gris para textos informativos
+        tertiary: "#0C1427",     // Fondo de tarjetas: Azul Marino Azure
+        "black-100": "#0A1221",  // Variación para gradientes oscuros
+        "black-200": "#040A18",  // Variación más profunda
         "white-100": "#f3f3f3",
+        "azure-blue": "#0078D4", // Color oficial Microsoft
       },
       boxShadow: {
-        card: "0px 35px 120px -15px #211e35",
+        // Sombra con resplandor azul Azure
+        card: "0px 35px 120px -15px #003E6E", 
       },
       screens: {
         xs: "450px",

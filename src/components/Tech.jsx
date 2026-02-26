@@ -2,24 +2,37 @@ import React from "react";
 import { BallCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { technologies } from "../constants";
-import { styles } from "../styles"; // Importamos los estilos para las letras
+import { styles } from "../styles"; 
 import { textVariant } from "../utils/motion";
 import { motion } from "framer-motion";
 
-const Tech = () => {
+const Tech = ({ language }) => {
+  // Definimos los textos para los encabezados según el idioma
+  const texts = {
+    es: {
+      sub: "HERRAMIENTAS Y SOFTWARE",
+      head: "Conocimientos Tecnológicos.",
+    },
+    en: {
+      sub: "TOOLS AND SOFTWARE",
+      head: "Technical Skills.",
+    }
+  };
+
+  // Seleccionamos el contenido (por defecto español)
+  const content = texts[language] || texts.es;
+
   return (
     <>
-      {/* Añadimos el encabezado con animaciones y estilos de Maryelis */}
       <motion.div variants={textVariant()} className="mb-10">
         <p className={`${styles.sectionSubText} text-center`}>
-          Herramientas y software
+          {content.sub}
         </p>
         <h2 className={`${styles.sectionHeadText} text-center`}>
-          Conocimientos Tecnológicos.
+          {content.head}
         </h2>
       </motion.div>
 
-      {/* Este es el contenedor de las esferas */}
       <div className='flex flex-row flex-wrap justify-center gap-10'>
         {technologies.map((technology) => (
           <div className='w-28 h-28' key={technology.name}>

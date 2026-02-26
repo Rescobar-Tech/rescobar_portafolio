@@ -4,7 +4,7 @@ import { styles } from "../styles";
 import { staggerContainer } from "../utils/motion";
 
 const StarWrapper = (Component, idName) =>
-  function HOC() {
+  function HOC(props) { // <--- 1. Agregamos 'props' aquí para capturar el language
     return (
       <motion.section
         variants={staggerContainer()}
@@ -17,7 +17,8 @@ const StarWrapper = (Component, idName) =>
           &nbsp;
         </span>
 
-        <Component />
+        {/* 2. Pasamos las props al componente hijo usando el operador spread */}
+        <Component {...props} /> 
       </motion.section>
     );
   };

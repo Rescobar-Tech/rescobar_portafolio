@@ -6,7 +6,6 @@ import {
   odoo,
   windows,
   sharepoint,
-  stellarpos,
   drive,
   onedrive,
   mega,
@@ -19,262 +18,423 @@ import {
   administrativa,
   agentenegocios,
   seguridadlaboral,
-  proyecto_riesgos,
-  proyecto2,
-  flujocaja,
-  liontech,
-  canguro,
+  spmigration,
+  sgsidefender,
+  migrationgoogle,
+  intune,
+  cesdeinfra,
+  automation,
+  cco,
+  hi,
+  zgza, 
   titulo,
   certificado,
-  certificado2
+  certificado2,
+  azure,
+  google,
+  wordpress,
+  linux,
+  powerauto,
+  devops,
+  sql,
+  powershell,
+  entraid,
+  php,
+  javascript,
+  git,
+  html,
+  css,
+  owasp,
+  owaspzap,
+  jmeter,
+  cloudflare,
+  seguridad,
+  soporte
 } from "../assets";
 
-export const navLinks = [
-  {
-    id: "about",
-    title: "Acerca",
-  },
-  {
-    id: "work",
-    title: "Trabajo",
-  },
-  {
-    id: "contact",
-    title: "Contacto",
-  },
-];
+export const navLinks = {
+  es: [
+    { id: "about", title: "Acerca" },
+    { id: "work", title: "Trabajo" },
+    { id: "contact", title: "Contacto" },
+  ],
+  en: [
+    { id: "about", title: "About" },
+    { id: "work", title: "Experience" },
+    { id: "contact", title: "Contact" },
+  ],
+};
 
-const services = [
-  {
-    title: "Analista de Finanzas",
-    icon: analistafinanzas,
-  },
-  {
-    title: "Analista Administrativa",
-    icon: administrativa,
-  },
-  {
-    title: "Asesora de Negocios",
-    icon: agentenegocios,
-  },
-  {
-    title: "Analista de Seguridad Laboral",
-    icon: seguridadlaboral,
-  },
-];
+const services = {
+  es: [
+    { title: "Especialista M365", icon: microsoft365 },
+    { title: "Infraestructura Azure", icon: azure },
+    { title: "Seguridad Cloud", icon: seguridad },
+    { title: "Líder Soporte IT", icon: soporte },
+  ],
+  en: [
+    { title: "M365 Specialist", icon: microsoft365 },
+    { title: "Azure Infrastructure", icon: azure },
+    { title: "Cloud Security", icon: seguridad },
+    { title: "IT Support Lead", icon: soporte },
+  ],
+};
 
 const technologies = [
-  {
-    name: "excel",
-    icon: excel,
-  },
-  {
-    name: "word",
-    icon: word,
-  },
-  {
-    name: "powerpoint",
-    icon: powerpoint,
-  },
-  {
-    name: "sharepoint",
-    icon: sharepoint,
-  },
-  {
-    name: "drive",
-    icon: drive,
-  },
-  {
-    name: "windows",
-    icon: windows,
-  },
-  {
-    name: "odoo",
-    icon: odoo,
-  },
-  {
-    name: "stellarpos",
-    icon: stellarpos,
-  },
-  {
-    name: "onedrive",
-    icon: onedrive,
-  },
-  {
-    name: "mega",
-    icon: mega,
-  },
-  {
-    name: "microsoft365",
-    icon: microsoft365,
-  },
-  {
-    name: "canva",
-    icon: canva,
-  },
+  { name: "microsoft365", icon: microsoft365 },
+  { name: "sharepoint", icon: sharepoint },
+  { name: "azure", icon: azure },
+  { name: "cloudflare", icon: cloudflare },
+  { name: "owasp", icon: owasp },
+  { name: "jmeter", icon: jmeter },
+  { name: "google", icon: google },
+  { name: "wordpress", icon: wordpress },
+  { name: "linux", icon: linux },
+  { name: "powerauto", icon: powerauto },
+  { name: "devops", icon: devops },
+  { name: "windows", icon: windows },
+  { name: "odoo", icon: odoo },
+  { name: "sql", icon: sql },
+  { name: "powershell", icon: powershell },
+  { name: "entraid", icon: entraid },
+  { name: "git", icon: git },
+  { name: "php", icon: php },
+  { name: "javascript", icon: javascript },
+  { name: "html", icon: html },
+  { name: "css", icon: css },
 ];
 
-const experiences = [
-  {
-    title: "Asesora de Negocios",
-    company_name: "LION TECH / Rubro tecnológico - Mayorista", // Puedes poner el nombre real aquí
-    icon: liontech, // Usamos el logo de LIONTECH
-    iconBg: "#383E56",
-    date: "Marzo 2025 - Actualidad",
-    points: [
-      "Asesoramiento especializado a clientes sobre soluciones tecnológicas y repuestos.",
-      "Cumplimiento de metas mensuales de ventas y captación de nuevos clientes corporativos.",
-      "Creación de Estrategias para Ventas/Negocios",
-      "Gestión de Contenido en Redes Sociales.",
-      "Gestión de Inventario.",
-    ],
-  },
-  {
-    title: "Analista de Finanzas y Administrativo",
-    company_name: "DISTRICUEROS EL CANGURO / Rubro Tecnológico y telefonía", // Puedes poner el nombre real aquí
-    icon: canguro, // Usamos el de canguro logo
-    iconBg: "#383E56",
-    date: "Septiembre 2021 - Enero 2025",
-    points: [
-      "Gestión de cuentas por cobrar y recuperación de cartera de clientes a nivel regional (Estado Lara).",
-      "Ejecución de conciliaciones bancarias y análisis detallado de flujo de caja.",
-      "Control administrativo de facturación y cobranzas en un entorno de alto volumen transaccional.",
-      "Optimización de procesos financieros internos para mejorar los tiempos de respuesta operativo.",
-      "Manejo de Sistemas integrales y Administrativos como Odoo 18 y Stellar, y especialista en herramientas ofimáticas.",
-    ],
-  },
-  {
-  title: "Asistente Integral, Contable y Recursos Humanos",
-  company_name: "Centro de Adiestramiento Profesional Zarina de Asuaje (CEMPROZA)",
-  icon: certificado2,
-  iconBg: "#E6DEDD",
-  date: "Agosto 2024 - Octubre 2024",
-  points: [
-    "Capacitación en procesos contables fundamentales: Estados Financieros, Ecuación Contable y Teoría de la Partida Doble.",
-    "Gestión administrativa avanzada: Elaboración de retenciones a clientes/proveedores, facturación, notas de crédito y declaraciones de I.V.A e I.S.L.R.",
-    "Dominio de legislación laboral y recursos humanos: Nómina, cálculos de impuestos Parafiscales (S.S.O, INCES, FAOV).",
-    "Manejo técnico de documentos mercantiles, cuadres de caja y reportes de ventas.",
-    ],
-  },
-  {
-    title: "Asesora de Ventas y Control de Inventario",
-    company_name: "ANKARA 2018, C.A. / Rubro Cuidado Personal",
-    icon: shopify, 
-    iconBg: "#E6DEDD",
-    date: "Enero 2021 - Septiembre 2021",
-    points: [
-      "Liderazgo en el asesoramiento técnico especializado sobre productos de cuidado personal y soluciones",
-      "Gestión efectiva de metas de ventas mensuales, logrando un incremento constante en la captación de clientes.",
-      "Control riguroso de facturación, cierre de caja diario y auditoría de inventarios para asegurar la precisión financiera.",
-      "Resolución de conflictos y atención al clientes, garantizando altos estándares de satisfacción y fidelización.",
-    ],
-  },
-  {
-    title: "Atención al Clientes y Ventas",
-    company_name: "INVERSIONES BURBUJAS C.A. / Rubro Papelería",
-    icon: shopify, 
-    iconBg: "#E6DEDD",
-    date: "Junio 2019 - Enero 2021",
-    points: [
-      "Excelencia en la atención al cliente y ventas consultivas, identificando necesidades específicas para ofrecer soluciones y productos.",
-      "Ejecución de procesos administrativos clave, incluyendo la gestión de facturación y el manejo de flujos de caja operativos.",
-      "Optimización de los tiempos de respuesta en el servicio post-venta, elevando los niveles de fidelización de la cartera de clientes.",
-      "Colaboración directa en la organización logística y el control de inventarios para garantizar la disponibilidad de productos.",
-    ],
-  },
-  {
-    title: "TSU en Higiene y Seguridad Laboral",
-    company_name: "UPTAEB / Formación Educativa Profesional",
-    icon: titulo,
-    iconBg: "#383E56",
-    date: "Título Profesional Universitario (2017-2020)",
-    points: [
-      "Evaluación y prevención de riesgos laborales en entornos operativos y administrativos.",
-      "Diseño de estrategias de seguridad para garantizar el cumplimiento de normativas legales.",
-      "Visión integral: capacidad para alinear la seguridad laboral con la rentabilidad financiera.",
-    ],
-  },
-  {
-  title: "Asistente de Oficina Computarizado",
-  company_name: "Centro de Secretariado Ejecutivo",
-  icon: certificado, // Aquí usamos la imagen que importaste
-  iconBg: "#E6DEDD",
-  date: "Abril 2017",
-  points: [
-    "Aprobación con promedio sobresaliente de 20 puntos en módulos técnicos y administrativos.",
-    "Dominio de herramientas de ofimática (MS Word), redacción de correspondencia y cálculo mercantil.",
-    "Capacitación integral en relaciones humanas, archivo, kardex y prácticas secretariales.",
-    ],
-  },
-];
+const experiences = {
+  es: [
+    {
+      title: "Líder Técnico de Infraestructura IT",
+      company_name: "CCO Systems",
+      icon: cco,
+      iconBg: "#ffffff",
+      date: "Diciembre 2021 - Febrero 2026",
+      points: [
+        "Liderazgo de administración en Microsoft 365, análisis de datos y proyectos de auditoría de seguridad.",
+        "Gestión de infraestructura en Azure (IaaS), administrando máquinas virtuales, redes y Microsoft Entra ID.",
+        "Implementación de flujos de seguridad DAST con OWASP ZAP para mitigar vulnerabilidades.",
+        "Ejecución de migraciones críticas de correo y datos hacia entornos de nube e híbridos.",
+      ],
+    },
+    {
+      title: "Analista de Sistemas IT",
+      company_name: "Hospital International Barquisimeto",
+      icon: hi,
+      iconBg: "#ffffff", // Ajustado a blanco para mejor contraste
+      date: "Enero 2024 - Agosto 2025",
+      points: [
+        "Administración avanzada de Office 365 y auditoría de seguridad en entornos de salud críticos.",
+        "Gestión de identidades mediante Single Sign-On (SSO) y administración compleja de DNS.",
+        "Mantenimiento de infraestructura híbrida asegurando alta disponibilidad y hardening de servidores.",
+        "Aplicación de metodologías Scrum y Azure DevOps para la gestión de proyectos técnicos.",
+      ],
+    },
+    {
+      title: "Analista de Sistemas",
+      company_name: "LA ZARAGOZA C.A",
+      icon: zgza,
+      iconBg: "#ffffff", // CAMBIO TÉCNICO: Fondo blanco para que el logo circular respire
+      date: "Enero 2019 - Enero 2021",
+      points: [
+        "Gestión de Infraestructura: Lideré la administración IT y ejecuté mejoras críticas en seguridad de red.",
+        "Soluciones de Seguridad: Administré antivirus corporativo (Kaspersky), incluyendo despliegue y monitoreo.",
+        "Mantenimiento Técnico: Diagnósticos avanzados de hardware y mantenimiento preventivo/correctivo.",
+        "Integridad del Sistema: Gestión de licencias, control de inventario y respaldos de datos críticos.",
+      ],
+    },
+    {
+      title: "Técnico de Soporte IT",
+      company_name: "LA ZARAGOZA C.A",
+      icon: zgza,
+      iconBg: "#ffffff", // CAMBIO TÉCNICO: Fondo blanco consistente para evitar el desborde visual
+      date: "Diciembre 2016 - Enero 2018",
+      points: [
+        "Soporte Técnico: Soporte presencial para sistemas, impresoras e infraestructura de red corporativa.",
+        "Mantenimiento: Formateo de equipos, actualizaciones de software y mantenimiento preventivo.",
+        "Respaldo: Gestión de copias de seguridad críticas para asegurar la integridad de datos.",
+      ],
+    },
+  ],
+  en: [
+    {
+      title: "IT Infrastructure Technical Lead",
+      company_name: "CCO Systems",
+      icon: cco,
+      iconBg: "#ffffff",
+      date: "December 2021 - February 2026",
+      points: [
+        "Leadership in Microsoft 365 administration, data analysis, and security auditing projects.",
+        "Azure Infrastructure management (IaaS), handling virtual machines, networking, and Microsoft Entra ID.",
+        "Implementation of DAST security flows with OWASP ZAP to mitigate web application vulnerabilities.",
+        "Execution of critical email and data migrations to cloud and hybrid environments.",
+      ],
+    },
+    {
+      title: "IT Systems Analyst",
+      company_name: "Hospital International Barquisimeto",
+      icon: hi,
+      iconBg: "#ffffff",
+      date: "January 2024 - August 2025",
+      points: [
+        "Advanced Office 365 administration and security auditing in critical healthcare environments.",
+        "Identity and access management through Single Sign-On (SSO) and complex DNS management.",
+        "Hybrid infrastructure maintenance ensuring high availability and server hardening.",
+        "Application of Scrum methodologies and Azure DevOps for technical project management.",
+      ],
+    },
+    {
+      title: "Systems Analyst",
+      company_name: "LA ZARAGOZA C.A",
+      icon: zgza,
+      iconBg: "#ffffff", // CAMBIO TÉCNICO: Consistencia en la versión inglés
+      date: "January 2019 - January 2021",
+      points: [
+        "Infrastructure Management: Led IT administration and executed critical network security improvements.",
+        "Security Solutions: Managed enterprise antivirus (Kaspersky), including deployment and monitoring.",
+        "Technical Maintenance: Advanced hardware diagnostics and preventive/corrective maintenance.",
+        "System Integrity: Managed software licensing, technical inventory, and critical data backups.",
+      ],
+    },
+    {
+      title: "IT Support Technician",
+      company_name: "LA ZARAGOZA C.A",
+      icon: zgza,
+      iconBg: "#ffffff", // CAMBIO TÉCNICO: Consistencia en la versión inglés
+      date: "December 2016 - January 2018",
+      points: [
+        "Technical Support: On-site support for computer systems, printers, and network infrastructure.",
+        "System Maintenance: Preventive maintenance, equipment formatting, and software updates.",
+        "Data Backup: Managed critical backups to ensure business continuity and data integrity.",
+      ],
+    },
+  ],
+};
 
-const testimonials = [
-  {
-    testimonial:
-      "Su capacidad para organizar las finanzas y su enfoque en el detalle es impresionante. Una profesional excepcional en la que se puede confiar plenamente.",
-    name: "Rafael Escobar",
-    designation: "Ing. Sistemas",
-    company: "CCO Systems",
-    image: testimonio,
-  },
-  {
-    testimonial:
-      "Maryelis tiene una capacidad excepcional para identificar oportunidades de mejora. Su gestión administrativa garantiza un control impecable de los activos, mientras que su análisis financiero aporta la claridad necesaria para maximizar la rentabilidad del negocio.",
-    name: "Jesús Cuicas",
-    designation: "Ing. Informática",
-    company: "CONTIGO CORP",
-    image: testimonio2,
-  },
-  {
-    testimonial:
-      "Su habilidad como asesora de negocios fue determinante para concretar nuestra expansión. No solo domina los números, sino que tiene la visión estratégica necesaria para cerrar acuerdos de negocio exitosos.",
-    name: "Marilin Colmenarez",
-    designation: "Analista Cobranza",
-    company: "LION TECH",
-    image: testimonio3,
-  },
-];
+const testimonials = {
+  es: [
+    {
+      testimonial: "Durante 5 años, Rafael demostró un liderazgo excepcional ejecutando proyectos de infraestructura y M365, garantizando siempre el cumplimiento del 100% en implementaciones críticas de seguridad.",
+      name: "Alejandro Gonzalez",
+      designation: "Director de Proyectos TI",
+      company: "CCO Systems",
+      image: testimonio,
+    },
+    {
+      testimonial: "Bajo el liderazgo técnico de Rafael, migramos con éxito SharePoint 2010 a la nube. Destaco su dominio en herramientas de migración y su visión para automatizar procesos críticos con Power Automate.",
+      name: "Jesús Cuicas",
+      designation: "Desarrollador",
+      company: "CONTIGO CORP",
+      image: testimonio2,
+    },
+    {
+      testimonial: "Rafael lideró con éxito el análisis de seguridad ofensiva (DAST) en nuestros portales web críticos. Su dominio de OWASP ZAP y su capacidad para remediar vulnerabilidades como SQLi y XSS fortalecieron drásticamente nuestra postura de defensa.",
+      name: "Carlos Augusto Herrera",
+      designation: "Especialista Senior TI",
+      company: "Solla",
+      image: testimonio3,
+    },
+  ],
+  en: [
+    {
+      testimonial: "Over 5 years, Rafael showed exceptional leadership in infrastructure and M365 projects, consistently achieving 100% completion in critical security implementations.",
+      name: "Alejandro Gonzalez",
+      designation: "IT Project Director",
+      company: "CCO Systems",
+      image: testimonio,
+    },
+    {
+      testimonial: "Under Rafael's technical leadership, we successfully migrated SharePoint 2010 to the cloud. I highlight his mastery of migration tools and his vision for automating critical processes with Power Automate.",
+      name: "Jesús Cuicas",
+      designation: "Developer",
+      company: "CONTIGO CORP",
+      image: testimonio2,
+    },
+    {
+      testimonial: "Rafael successfully led offensive security analysis (DAST) on our critical web portals. His mastery of OWASP ZAP and his ability to remediate vulnerabilities like SQLi and XSS drastically strengthened our defense posture.",
+      name: "Carlos Augusto Herrera",
+      designation: "Senior IT Specialist",
+      company: "Solla",
+      image: testimonio3,
+    },
+  ],
+};
 
-const projects = [
-   {
-    name: "Identificación de Factores de Riesgo",
-    description:
-      "Informe técnico detallado sobre el diagnóstico de vulnerabilidades en entornos industriales, evaluando riesgos físicos, químicos y ergonómicos para la prevención de accidentes.",
-    tags: [
-      { name: "Seguridad Industrial", color: "blue-text-gradient" },
-      { name: "ISO 45001", color: "green-text-gradient" },
-      { name: "Auditoría", color: "pink-text-gradient" },
-    ],
-    image: proyecto_riesgos,
-    source_code_link: "https://docs.google.com/document/d/1bARXk1Rzyvmi-dbN6Ar1NtAhC8ggq-bi/edit?usp=sharing&ouid=103404478456539095316&rtpof=true&sd=true",
-  },
-  {
-    name: "Métodos de Prevención y Control",
-    description:
-      "Diseño de estrategias de mitigación y protocolos de actuación ante factores de riesgo laboral, incluyendo planes de capacitación y selección de EPP especializados.",
-    tags: [
-      { name: "Prevención", color: "blue-text-gradient" },
-      { name: "Salud Ocupacional", color: "green-text-gradient" },
-      { name: "COVENIN", color: "orange-text-gradient" },
-    ],
-    image: proyecto2,
-    source_code_link: "https://docs.google.com/document/d/1bARXk1Rzyvmi-dbN6Ar1NtAhC8ggq-bi/edit?usp=sharing&ouid=103404478456539095316&rtpof=true&sd=true",
-  },
-  {
-    name: "Optimización de Flujos de Caja",
-    description:
-      "Implementación de un sistema de control administrativo para la gestión de tesorería e inventarios, logrando una reducción en los tiempos de conciliación y mayor precisión en los cierres diarios.",
-    tags: [
-      { name: "Finanzas", color: "blue-text-gradient" },
-      { name: "Excel Avanzado", color: "green-text-gradient" },
-      { name: "Auditoría", color: "pink-text-gradient" },
-    ],
-    image: flujocaja,
-    source_code_link: "#", // Puedes dejarlo con # si no hay link externo
-  },
-];
-
-
-
+const projects = {
+  es: [
+    {
+      name: "Modernización SharePoint Cloud",
+      description:
+        "Lideré la migración crítica de SharePoint Server 2010 a SharePoint Online con SharePoint Migration Tools, ejecutando la reestructuración de arquitecturas obsoletas hacia entornos modernos. Implementé la migración de librerías masivas, permisos granulares y la automatización de flujos de trabajo tradicionales mediante Power Automate para optimizar la colaboración empresarial.",
+      tags: [
+        { name: "SharePoint-Online", color: "blue-text-gradient" },
+        { name: "Power-Automate", color: "green-text-gradient" },
+        { name: "Migration-Tool", color: "pink-text-gradient" },
+      ],
+      image: spmigration,
+      source_code_link: "#",
+    },
+    {
+      name: "SGSI & Microsoft Security Stack",
+      description:
+        "Lideré el diseño e implementación de un Sistema de Gestión de Seguridad de la Información (SGSI) utilizando el ecosistema avanzado de Microsoft. Configuré Microsoft Defender para la detección proactiva de amenazas en endpoints e identidades, y desplegué Microsoft Purview para el gobierno de datos, estableciendo políticas de etiquetas de sensibilidad (DLP) y cumplimiento normativo para proteger activos críticos de la organización.",
+      tags: [
+        { name: "Defender-for-Cloud", color: "blue-text-gradient" },
+        { name: "Microsoft-Purview", color: "green-text-gradient" },
+        { name: "Compliance", color: "pink-text-gradient" },
+      ],
+      image: sgsidefender,
+      source_code_link: "#",
+    },
+    {
+      name: "Modern Endpoint Management",
+      description:
+        "Despliegue masivo y administración de Microsoft Intune para Grupo BIOS, gestionando una flota de más de 1000 dispositivos bajo modelos Corporativos y BYOD, consultorías sobre manejo de Intune como administradores del portal de administración. Implementé políticas de cumplimiento (Compliance), configuración de perfiles de seguridad tanto para Windows, Android y/o IOS y automatización del ciclo de vida del dispositivo para simplificar la administración de flota a gran escala.",
+      tags: [
+        { name: "Intune", color: "blue-text-gradient" },
+        { name: "Endpoint", color: "green-text-gradient" },
+        { name: "BYOD", color: "pink-text-gradient" },
+      ],
+      image: intune,
+      source_code_link: "#",
+    },
+    {
+      name: "Migración Google - Microsoft",
+      description:
+        "Ejecuté la migración integral de servicios desde Google Workspace hacia Microsoft 365. Lideré la transferencia crítica de buzones de correo, datos en Drive y la configuración de identidades mediante Single Sign-On (SSO), garantizando una transición fluida, sin pérdida de información y manteniendo la continuidad operativa para todos los usuarios de la organización.",
+      tags: [
+        { name: "Google-to-M365", color: "blue-text-gradient" },
+        { name: "Identity-SSO", color: "green-text-gradient" },
+        { name: "Cloud-Migration", color: "pink-text-gradient" },
+      ],
+      image: migrationgoogle,
+      source_code_link: "#",
+    },
+    {
+      name: "Ciberseguridad Ofensiva",
+      description:
+        "Ejecuté auditorías de seguridad dinámica (DAST) mediante escaneos de vulnerabilidades con OWASP ZAP sobre portales web críticos. El proyecto incluyó la identificación de fallos de seguridad (SQLi, XSS, configuraciones erróneas), el análisis de riesgos y la implementación de remediaciones técnicas para fortalecer la postura de defensa de las aplicaciones ante ataques externos.",
+      tags: [
+        { name: "OWASP-ZAP", color: "blue-text-gradient" },
+        { name: "Ethical-Hacking", color: "green-text-gradient" },
+        { name: "Vulnerability-Management", color: "pink-text-gradient" },
+      ],
+      image: owaspzap,
+      source_code_link: "#",
+    },
+    {
+      name: "Infraestructura Cloud CESDE",
+      description:
+        "Diseñé y desplegué la infraestructura completa en Microsoft Azure para el portal web institucional del CESDE. El proyecto incluyó la configuración de App Services, bases de datos SQL de alta disponibilidad y la implementación de redes virtuales (VNet) con reglas de seguridad estrictas, garantizando un entorno escalable, resiliente y optimizado para el tráfico estudiantil.",
+      tags: [
+        { name: "Azure-App-Service", color: "blue-text-gradient" },
+        { name: "SQL-Azure", color: "green-text-gradient" },
+        { name: "Cloud-Architecture", color: "pink-text-gradient" },
+      ],
+      image: cesdeinfra,
+      source_code_link: "#",
+    },
+    {
+      name: "Automatización de Identidades a Gran Escala",
+      description:
+        "Desarrollé y ejecuté scripts avanzados para la actualización masiva de propiedades de objetos en Microsoft Entra ID, impactando a más de 20,000 usuarios de forma simultánea. Esta solución automatizada garantizó la integridad de los datos de identidad, optimizó los tiempos de administración en un 90% y permitió el cumplimiento de políticas de acceso dinámico basadas en atributos actualizados.",
+      tags: [
+        { name: "PowerShell-Automation", color: "blue-text-gradient" },
+        { name: "Microsoft-Entra-ID", color: "green-text-gradient" },
+        { name: "Bulk-Operations", color: "pink-text-gradient" },
+      ],
+      image: automation,
+      source_code_link: "#",
+    },
+  ],
+  en: [
+    {
+      name: "SharePoint Cloud Modernization",
+      description:
+        "Led the critical migration from SharePoint Server 2010 to SharePoint Online using SharePoint Migration Tools, restructuring legacy architectures into modern environments. I implemented mass library migrations, granular permissions, and automation of traditional workflows through Power Automate to optimize business collaboration.",
+      tags: [
+        { name: "SharePoint-Online", color: "blue-text-gradient" },
+        { name: "Power-Automate", color: "green-text-gradient" },
+        { name: "Migration-Tool", color: "pink-text-gradient" },
+      ],
+      image: spmigration,
+      source_code_link: "#",
+    },
+    {
+      name: "ISMS & Microsoft Security Stack",
+      description:
+        "Led the design and implementation of an Information Security Management System (ISMS) using the advanced Microsoft ecosystem. I configured Microsoft Defender for proactive threat detection on endpoints and identities, and deployed Microsoft Purview for data governance, establishing sensitivity label policies (DLP) and regulatory compliance to protect critical organizational assets.",
+      tags: [
+        { name: "Defender-for-Cloud", color: "blue-text-gradient" },
+        { name: "Microsoft-Purview", color: "green-text-gradient" },
+        { name: "Compliance", color: "pink-text-gradient" },
+      ],
+      image: sgsidefender,
+      source_code_link: "#",
+    },
+    {
+      name: "Modern Endpoint Management",
+      description:
+        "Massive deployment and administration of Microsoft Intune for Grupo BIOS, managing a fleet of more than 1000 devices under Corporate and BYOD models, providing Intune management consulting. I implemented compliance policies, configured security profiles for Windows, Android, and/or iOS, and automated the device lifecycle to simplify large-scale fleet administration.",
+      tags: [
+        { name: "Intune", color: "blue-text-gradient" },
+        { name: "Endpoint", color: "green-text-gradient" },
+        { name: "BYOD", color: "pink-text-gradient" },
+      ],
+      image: intune,
+      source_code_link: "#",
+    },
+    {
+      name: "Google to Microsoft Migration",
+      description:
+        "Executed the comprehensive migration of services from Google Workspace to Microsoft 365. I led the critical transfer of mailboxes, Drive data, and identity configuration through Single Sign-On (SSO), ensuring a smooth transition without data loss and maintaining operational continuity for all organization users.",
+      tags: [
+        { name: "Google-to-M365", color: "blue-text-gradient" },
+        { name: "Identity-SSO", color: "green-text-gradient" },
+        { name: "Cloud-Migration", color: "pink-text-gradient" },
+      ],
+      image: migrationgoogle,
+      source_code_link: "#",
+    },
+    {
+      name: "Offensive Cybersecurity",
+      description:
+        "Executed Dynamic Application Security Testing (DAST) through vulnerability scans with OWASP ZAP on critical web portals. The project included identifying security flaws (SQLi, XSS, misconfigurations), risk analysis, and implementing technical remediations to strengthen the applications' defense posture against external attacks.",
+      tags: [
+        { name: "OWASP-ZAP", color: "blue-text-gradient" },
+        { name: "Ethical-Hacking", color: "green-text-gradient" },
+        { name: "Vulnerability-Management", color: "pink-text-gradient" },
+      ],
+      image: owaspzap,
+      source_code_link: "#",
+    },
+    {
+      name: "CESDE Cloud Infrastructure",
+      description:
+        "Designed and deployed the full infrastructure on Microsoft Azure for CESDE's institutional web portal. The project included configuring App Services, high-availability SQL databases, and implementing virtual networks (VNet) with strict security rules, guaranteeing a scalable, resilient, and optimized environment for student traffic.",
+      tags: [
+        { name: "Azure-App-Service", color: "blue-text-gradient" },
+        { name: "SQL-Azure", color: "green-text-gradient" },
+        { name: "Cloud-Architecture", color: "pink-text-gradient" },
+      ],
+      image: cesdeinfra,
+      source_code_link: "#",
+    },
+    {
+      name: "Large-Scale Identity Automation",
+      description:
+        "Developed and executed advanced scripts for bulk updating object properties in Microsoft Entra ID, impacting over 20,000 users simultaneously. This automated solution ensured identity data integrity, optimized administration times by 90%, and allowed compliance with dynamic access policies based on updated attributes.",
+      tags: [
+        { name: "PowerShell-Automation", color: "blue-text-gradient" },
+        { name: "Microsoft-Entra-ID", color: "green-text-gradient" },
+        { name: "Bulk-Operations", color: "pink-text-gradient" },
+      ],
+      image: automation,
+      source_code_link: "#",
+    },
+  ],
+};
 
 export { services, technologies, experiences, testimonials, projects };
