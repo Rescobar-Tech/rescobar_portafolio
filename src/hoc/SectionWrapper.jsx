@@ -4,20 +4,21 @@ import { styles } from "../styles";
 import { staggerContainer } from "../utils/motion";
 
 const StarWrapper = (Component, idName) =>
-  function HOC(props) { // <--- 1. Agregamos 'props' aquí para capturar el language
+  function HOC(props) { 
     return (
       <motion.section
         variants={staggerContainer()}
         initial='hidden'
         whileInView='show'
-        viewport={{ once: true, amount: 0.25 }}
+        // CORRECCIÓN TÉCNICA: Bajamos amount a 0.1 para que dispare la visibilidad en móviles
+        viewport={{ once: true, amount: 0.1 }} 
         className={`${styles.padding} max-w-7xl mx-auto relative z-0`}
       >
         <span className='hash-span' id={idName}>
           &nbsp;
         </span>
 
-        {/* 2. Pasamos las props al componente hijo usando el operador spread */}
+        {/* Pasamos las props al componente hijo */}
         <Component {...props} /> 
       </motion.section>
     );
