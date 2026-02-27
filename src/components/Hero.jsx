@@ -20,7 +20,7 @@ const Hero = ({ language }) => {
       desc: "Modernizo infraestructuras empresariales y fortalezco la ciberseguridad cloud.",
       status: "Disponible para trabajar",
       download: "Descargar CV",
-      fileName: "CV_Rafael_Escobar_(ES).pdf", // Nombre limpio para la descarga
+      fileName: "CV_Rafael_Escobar_ES.pdf",
       copyMsg: "¡Correo copiado con éxito!" 
     },
     en: {
@@ -29,7 +29,7 @@ const Hero = ({ language }) => {
       desc: "I modernize enterprise infrastructures and strengthen cloud cybersecurity.",
       status: "Available for work",
       download: "Download CV",
-      fileName: "CV_Rafael_Escobar_(EN).pdf", // Nombre limpio para la descarga
+      fileName: "CV_Rafael_Escobar_EN.pdf",
       copyMsg: "Email copied successfully!"
     }
   };
@@ -46,9 +46,11 @@ const Hero = ({ language }) => {
   return (
     <section className="relative w-full min-h-screen mx-auto flex flex-col justify-center items-center overflow-hidden pt-24 md:pt-0 z-10">
       
+      {/* TOAST CORREGIDO: CENTRADO GLOBAL Y POSICIÓN FIJA */}
       <AnimatePresence>
         {showToast && (
           <motion.div
+            // x: "-50%" es la clave para que el left: 50% funcione perfecto
             initial={{ opacity: 0, y: -50, x: "-50%" }}
             animate={{ opacity: 1, y: 0, x: "-50%" }}
             exit={{ opacity: 0, y: -50, x: "-50%" }}
@@ -112,7 +114,7 @@ const Hero = ({ language }) => {
 
         {/* Botonera Social & CV */}
         <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 md:gap-4 mt-4 relative z-50 w-full max-w-md sm:max-w-none px-4">
-          <a href="https://www.linkedin.com/in/rafael-escobar-2456161b0" target="_blank" rel="noopener noreferrer" className="bg-tertiary/50 border border-white/10 px-5 py-2.5 rounded-full text-white text-xs md:text-sm flex items-center justify-center gap-2 hover:bg-[#3399FF] transition-all cursor-pointer">
+          <a href="https://www.linkedin.com/in/rafael-escobar-2456161b0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" className="bg-tertiary/50 border border-white/10 px-5 py-2.5 rounded-full text-white text-xs md:text-sm flex items-center justify-center gap-2 hover:bg-[#3399FF] transition-all cursor-pointer">
             <FaLinkedin className="text-lg" /> LinkedIn
           </a>
 
@@ -125,12 +127,7 @@ const Hero = ({ language }) => {
             <span className="truncate">rescobar.tech@gmail.com</span>
           </button>
 
-          {/* CORRECCIÓN: download={content.fileName} fuerza el nombre sin el hash de Vite */}
-          <a 
-            href={currentCV} 
-            download={content.fileName} 
-            className="bg-[#3399FF] border border-[#3399FF] px-6 py-2.5 rounded-full text-white text-xs md:text-sm flex items-center justify-center gap-2 hover:bg-[#267ACC] transition-all font-bold shadow-lg cursor-pointer"
-          >
+          <a href={currentCV} download={content.fileName} className="bg-[#3399FF] border border-[#3399FF] px-6 py-2.5 rounded-full text-white text-xs md:text-sm flex items-center justify-center gap-2 hover:bg-[#267ACC] transition-all font-bold shadow-lg cursor-pointer">
             <FaDownload className="text-lg" /> {content.download}
           </a>
         </div>
