@@ -28,6 +28,7 @@ const Contact = ({ language }) => {
       btn: "Enviar",
       btnLoading: "Enviando...",
       alertSuccess: "¡Gracias! Me pondré en contacto contigo pronto.",
+      alertError: "Hubo un error al enviar el mensaje. Inténtalo de nuevo.",
     },
     en: {
       sub: "Get in touch",
@@ -41,6 +42,7 @@ const Contact = ({ language }) => {
       btn: "Send",
       btnLoading: "Sending...",
       alertSuccess: "Thank you! I will get back to you soon.",
+      alertError: "Something went wrong. Please try again later.",
     }
   };
 
@@ -55,10 +57,11 @@ const Contact = ({ language }) => {
     e.preventDefault();
     setLoading(true);
 
+    // USO DIRECTO DE TUS CREDENCIALES PARA ASEGURAR FUNCIONAMIENTO
     emailjs
       .send(
-        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+        "service_9jq8qrj", // Service ID
+        "template_15mvar9", // Template ID
         {
           from_name: form.name,
           to_name: "Rafael Escobar",
@@ -66,7 +69,7 @@ const Contact = ({ language }) => {
           to_email: "rescobar.tech@gmail.com",
           message: form.message,
         },
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+        "SbVodlG6dL1qT7J0d" // Public Key
       )
       .then(
         () => {
@@ -77,9 +80,14 @@ const Contact = ({ language }) => {
         },
         (error) => {
           setLoading(false);
-          console.error(error);
+          console.error("EMAILJS ERROR:", error);
+          alert(content.alertError); // Alerta básica si falla
         }
-      );
+      )
+      .catch((err) => {
+        setLoading(false);
+        console.error("CRITICAL ERROR:", err);
+      });
   };
 
   return (
@@ -134,7 +142,6 @@ const Contact = ({ language }) => {
         </form>
       </motion.div>
 
-      {/* --- SECCIÓN DERECHA: FUNDIDO RADIAL AGRESIVO --- */}
       <motion.div
         variants={slideIn("right", "tween", 0.2, 1)}
         className='xl:flex-1 flex items-center justify-center min-h-[400px] lg:min-h-[550px] relative'
@@ -148,17 +155,11 @@ const Contact = ({ language }) => {
             src={imgform} 
             alt='Cloud Computing' 
             style={{
-              /* AJUSTE TÉCNICO: 
-                 Iniciamos la transparencia mucho antes (20%) y terminamos antes (70%) 
-                 para asegurar que las esquinas del cuadrado de la imagen sean 100% invisibles.
-              */
               WebkitMaskImage: 'radial-gradient(circle, rgba(0,0,0,1) 20%, rgba(0,0,0,0) 70%)',
               maskImage: 'radial-gradient(circle, rgba(0,0,0,1) 20%, rgba(0,0,0,0) 70%)'
             }}
             className='w-[90%] lg:w-[110%] h-auto object-contain z-10 opacity-90 brightness-110' 
           />
-          
-          {/* Brillo Azure de fondo para disimular cualquier rastro de borde */}
           <div className="absolute w-[60%] h-[60%] bg-[#3399FF] opacity-20 blur-[100px] rounded-full -z-0" />
         </motion.div>
       </motion.div>

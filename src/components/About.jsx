@@ -31,7 +31,7 @@ const About = ({ language }) => {
   const texts = {
     es: {
       sub: "INTRODUCCIÓN",
-      head: "Acerca de Mi.",
+      head: "Acerca de mi.",
       p: "Especialista Senior en infraestructura IT con más de 8 años de trayectoria. Experto en la modernización de entornos empresariales mediante el ecosistema Microsoft 365 y soluciones de nube en Azure.",
       caption1: "Ciberseguridad",
       caption2: "M365 Security" 

@@ -21,7 +21,6 @@ import {
   spmigration,
   sgsidefender,
   migrationgoogle,
-  intune,
   cesdeinfra,
   automation,
   cco,
@@ -107,11 +106,11 @@ const technologies = [
 const experiences = {
   es: [
     {
-      title: "Líder Técnico de Infraestructura IT",
+      title: "Líder Técnico de Infraestructura TI",
       company_name: "CCO Systems",
       icon: cco,
       iconBg: "#ffffff",
-      date: "Diciembre 2021 - Febrero 2026",
+      date: "Diciembre 2021 - Marzo 2026",
       points: [
         "Liderazgo de administración en Microsoft 365, análisis de datos y proyectos de auditoría de seguridad.",
         "Gestión de infraestructura en Azure (IaaS), administrando máquinas virtuales, redes y Microsoft Entra ID.",
@@ -120,8 +119,8 @@ const experiences = {
       ],
     },
     {
-      title: "Analista de Sistemas IT",
-      company_name: "Hospital International Barquisimeto",
+      title: "Analista de Sistemas TI",
+      company_name: "Hospital Internacional Barquisimeto",
       icon: hi,
       iconBg: "#ffffff", // Ajustado a blanco para mejor contraste
       date: "Enero 2024 - Agosto 2025",
@@ -146,7 +145,7 @@ const experiences = {
       ],
     },
     {
-      title: "Técnico de Soporte IT",
+      title: "Técnico de Soporte TI",
       company_name: "LA ZARAGOZA C.A",
       icon: zgza,
       iconBg: "#ffffff", // CAMBIO TÉCNICO: Fondo blanco consistente para evitar el desborde visual
@@ -164,7 +163,7 @@ const experiences = {
       company_name: "CCO Systems",
       icon: cco,
       iconBg: "#ffffff",
-      date: "December 2021 - February 2026",
+      date: "December 2021 - March 2026",
       points: [
         "Leadership in Microsoft 365 administration, data analysis, and security auditing projects.",
         "Azure Infrastructure management (IaaS), handling virtual machines, networking, and Microsoft Entra ID.",
@@ -230,7 +229,7 @@ const testimonials = {
       image: testimonio2,
     },
     {
-      testimonial: "Rafael lideró con éxito el análisis de seguridad ofensiva (DAST) en nuestros portales web críticos. Su dominio de OWASP ZAP y su capacidad para remediar vulnerabilidades como SQLi y XSS fortalecieron drásticamente nuestra postura de defensa.",
+      testimonial: "Rafael lideró con éxito el análisis de seguridad ofensiva en nuestros portales web críticos. Su dominio de OWASP ZAP y su capacidad para remediar vulnerabilidades como XSS fortalecieron drásticamente nuestra postura de defensa.",
       name: "Carlos Augusto Herrera",
       designation: "Especialista Senior TI",
       company: "Solla",
@@ -265,7 +264,7 @@ const testimonials = {
 const projects = {
   es: [
     {
-      name: "Modernización SharePoint Cloud",
+      name: "Migración a SharePoint Online",
       description:
         "Lideré la migración crítica de SharePoint Server 2010 a SharePoint Online con SharePoint Migration Tools, ejecutando la reestructuración de arquitecturas obsoletas hacia entornos modernos. Implementé la migración de librerías masivas, permisos granulares y la automatización de flujos de trabajo tradicionales mediante Power Automate para optimizar la colaboración empresarial.",
       tags: [
@@ -277,27 +276,15 @@ const projects = {
       source_code_link: "#",
     },
     {
-      name: "SGSI & Microsoft Security Stack",
+      name: "Ciberseguridad y Cumplimiento",
       description:
-        "Lideré el diseño e implementación de un Sistema de Gestión de Seguridad de la Información (SGSI) utilizando el ecosistema avanzado de Microsoft. Configuré Microsoft Defender para la detección proactiva de amenazas en endpoints e identidades, y desplegué Microsoft Purview para el gobierno de datos, estableciendo políticas de etiquetas de sensibilidad (DLP) y cumplimiento normativo para proteger activos críticos de la organización.",
+        "Lideré el diseño e implementación de un Sistema de Gestión de Seguridad de la Información (SGSI) utilizando el ecosistema avanzado de Microsoft Defender. Configuré Microsoft Defender para la detección proactiva de amenazas en endpoints e identidades, y desplegué Microsoft Purview para el gobierno de datos, estableciendo políticas de etiquetas de sensibilidad (DLP) y cumplimiento normativo para proteger activos críticos de la organización.",
       tags: [
         { name: "Defender-for-Cloud", color: "blue-text-gradient" },
         { name: "Microsoft-Purview", color: "green-text-gradient" },
         { name: "Compliance", color: "pink-text-gradient" },
       ],
       image: sgsidefender,
-      source_code_link: "#",
-    },
-    {
-      name: "Modern Endpoint Management",
-      description:
-        "Despliegue masivo y administración de Microsoft Intune para Grupo BIOS, gestionando una flota de más de 1000 dispositivos bajo modelos Corporativos y BYOD, consultorías sobre manejo de Intune como administradores del portal de administración. Implementé políticas de cumplimiento (Compliance), configuración de perfiles de seguridad tanto para Windows, Android y/o IOS y automatización del ciclo de vida del dispositivo para simplificar la administración de flota a gran escala.",
-      tags: [
-        { name: "Intune", color: "blue-text-gradient" },
-        { name: "Endpoint", color: "green-text-gradient" },
-        { name: "BYOD", color: "pink-text-gradient" },
-      ],
-      image: intune,
       source_code_link: "#",
     },
     {
@@ -327,7 +314,7 @@ const projects = {
     {
       name: "Infraestructura Cloud CESDE",
       description:
-        "Diseñé y desplegué la infraestructura completa en Microsoft Azure para el portal web institucional del CESDE. El proyecto incluyó la configuración de App Services, bases de datos SQL de alta disponibilidad y la implementación de redes virtuales (VNet) con reglas de seguridad estrictas, garantizando un entorno escalable, resiliente y optimizado para el tráfico estudiantil.",
+        "Apoyé al equipo de Infraestructura con en el despliegue de la infraestructura completa en Microsoft Azure para el portal web institucional del CESDE y su salida a producción. El proyecto incluyó la configuración de Máquinas virutales, balanceador de carga, bases de datos SQL de alta disponibilidad y la implementación de redes virtuales (VNet) con reglas de seguridad estrictas, garantizando un entorno escalable, resiliente y optimizado para el tráfico estudiantil.",
       tags: [
         { name: "Azure-App-Service", color: "blue-text-gradient" },
         { name: "SQL-Azure", color: "green-text-gradient" },
@@ -375,18 +362,6 @@ const projects = {
       source_code_link: "#",
     },
     {
-      name: "Modern Endpoint Management",
-      description:
-        "Massive deployment and administration of Microsoft Intune for Grupo BIOS, managing a fleet of more than 1000 devices under Corporate and BYOD models, providing Intune management consulting. I implemented compliance policies, configured security profiles for Windows, Android, and/or iOS, and automated the device lifecycle to simplify large-scale fleet administration.",
-      tags: [
-        { name: "Intune", color: "blue-text-gradient" },
-        { name: "Endpoint", color: "green-text-gradient" },
-        { name: "BYOD", color: "pink-text-gradient" },
-      ],
-      image: intune,
-      source_code_link: "#",
-    },
-    {
       name: "Google to Microsoft Migration",
       description:
         "Executed the comprehensive migration of services from Google Workspace to Microsoft 365. I led the critical transfer of mailboxes, Drive data, and identity configuration through Single Sign-On (SSO), ensuring a smooth transition without data loss and maintaining operational continuity for all organization users.",
@@ -413,7 +388,7 @@ const projects = {
     {
       name: "CESDE Cloud Infrastructure",
       description:
-        "Designed and deployed the full infrastructure on Microsoft Azure for CESDE's institutional web portal. The project included configuring App Services, high-availability SQL databases, and implementing virtual networks (VNet) with strict security rules, guaranteeing a scalable, resilient, and optimized environment for student traffic.",
+        "I supported the Infrastructure team in the full deployment of the Microsoft Azure environment for the CESDE institutional web portal and its successful launch into production. The project included the configuration of Virtual Machines, Load Balancers, and High-Availability SQL Databases, as well as the implementation of Virtual Networks (VNet) with strict security rules. This ensured a scalable, resilient, and optimized environment tailored for student traffic.",
       tags: [
         { name: "Azure-App-Service", color: "blue-text-gradient" },
         { name: "SQL-Azure", color: "green-text-gradient" },
